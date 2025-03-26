@@ -51,7 +51,7 @@ if openai_api_key:
                 # Generate a response using OpenAI
                 full_prompt = f"{context}\nCustomer: {query}\nSupport Agent:"
                 response = self.client.chat.completions.create(
-                    model="gpt-3.5-turbo"
+                    model="gpt-3.5-turbo",
                     messages=[
                         {"role": "system", "content": "You are a customer support AI agent for TechGadgets.com, an online electronics store."},
                         {"role": "user", "content": full_prompt}
